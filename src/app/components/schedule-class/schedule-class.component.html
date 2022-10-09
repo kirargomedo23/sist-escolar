@@ -1,0 +1,32 @@
+
+
+<table class="width-full"
+    [dataSource]="horarios"
+    mat-table  >
+
+    <ng-container *ngFor="let header of ejeX;let i = index " >
+        <ng-container  [matColumnDef]="header">
+            <th  mat-header-cell *matHeaderCellDef mat-sort-header> {{header}} </th>
+            <td  mat-cell *matCellDef="let row ; let x = index" >
+                <ng-container *ngIf=" i == 0 " >
+                    {{ ejeY[x]  }}
+                </ng-container>
+
+                <ng-container *ngIf=" i!=0 " >
+                    <ng-container *ngFor="let hx of horarios">
+                        <ng-container *ngIf="hx.y == ejeY[x] && hx.x == header " >
+                            {{hx.info}}
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+
+            </td>
+        </ng-container>
+    </ng-container>
+
+    <!-- Columna Control -->
+    <tr *matHeaderRowDef="ejeX" mat-header-row></tr>
+    <tr  *matRowDef="let row; columns: ejeX"
+    mat-row ></tr>
+
+</table>

@@ -13,7 +13,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'sist/table-list', title: 'Table List',  icon:'content_paste', class: '' },
     { path: 'sist/typography', title: 'Typography',  icon:'library_books', class: '' },
     { path: 'sist/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: 'sist/notifications', title: 'Notifications',  icon:'notifications', class: '' },
+    
 ];
 
 @Component({
