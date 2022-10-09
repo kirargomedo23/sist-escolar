@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
       return;
     }
 
-    this.router.navigateByUrl('/sist/sist/icons');
+    this.router.navigateByUrl('/sist/icons');
     
   }
 

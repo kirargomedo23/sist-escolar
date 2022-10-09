@@ -4,7 +4,13 @@ import { TeacherComponent } from './teacher.component';
 
 const routes: Routes = [{
   path: '',
-  component: TeacherComponent
+  component: TeacherComponent,
+  children: [
+    {
+      path: 'my-account',
+      loadChildren : () => import('./my-account/account.module').then(m => m.AccountModule)
+    }
+  ]
 }];
 
 @NgModule({

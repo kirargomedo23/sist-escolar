@@ -32,9 +32,21 @@ const routes: Routes =[
         path: 'sist',
         component: AdminLayoutComponent,
         children: [{
-          path: 'sist',
+          path: '',
           loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
         }]
+      },
+      {
+        path: 'teacher',
+        loadChildren:() => import('./layouts/teacher/teacher.module').then(m => m.TeacherModule)
+      },
+      {
+        path: 'student',
+        loadChildren:() => import('./layouts/student/student.module').then(m => m.StudentModule)
+      },
+      {
+        path: 'family',
+        loadChildren:() => import('./layouts/family/family.module').then(m => m.FamilyModule)
       }
     ]
   }
