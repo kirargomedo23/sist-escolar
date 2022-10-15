@@ -7,7 +7,7 @@ const routes: Routes = [{
   component: TeacherComponent,
   children: [
     {
-      path: 'my-account',
+      path: '',
       loadChildren : () => import('./my-account/account.module').then(m => m.AccountModule)
     }
   ]
